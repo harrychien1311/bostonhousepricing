@@ -4,4 +4,5 @@ pandas
 numpy
 matplotlib
 gunicorn
-
+streamlit
+streamlit_ace
