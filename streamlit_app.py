@@ -42,3 +42,6 @@ def main():
     if st.button("Predict"):
         result = prediction(data)
         st.success(f"The price is {result}")
+
+if __name__=='__main__': 
+    main()
