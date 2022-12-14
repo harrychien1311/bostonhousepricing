@@ -15,7 +15,7 @@ scaler=pickle.load(open('scaling.pkl','rb'))
 
 def prediction(data):
     data = scaler.transform(data)
-    return regmodel.predict([data])
+    return regmodel.predict(data)
 
 #This is the main function in which we define our webpage
 def main():
@@ -38,7 +38,7 @@ def main():
     b    = st.number_input("B")
     lstat = st.number_input("LSTAT")
 
-    data = [crim, zn, indus, nox, rm, age, dis, rad, tax, ptra, b, lstat]
+    data = [[crim, zn, indus, nox, rm, age, dis, rad, tax, ptra, b, lstat]]
     if st.button("Predict"):
         result = prediction(data)
         st.success(f"The price is {result}")
