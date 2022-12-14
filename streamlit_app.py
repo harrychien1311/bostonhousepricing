@@ -28,6 +28,7 @@ def main():
     crim = st.number_input("CRIM")
     zn   = st.number_input("ZN")
     indus= st.number_input("INDUS")
+    chas = st.number_input("CHAS")
     nox  = st.number_input("NOX")
     rm   = st.number_input("RM")
     age  = st.number_input("Age")
@@ -38,7 +39,7 @@ def main():
     b    = st.number_input("B")
     lstat = st.number_input("LSTAT")
 
-    data = [[crim, zn, indus, nox, rm, age, dis, rad, tax, ptra, b, lstat]]
+    data = [[crim, zn, indus, chas, nox, rm, age, dis, rad, tax, ptra, b, lstat]]
     if st.button("Predict"):
         result = prediction(data)
         st.success(f"The price is {result}")
