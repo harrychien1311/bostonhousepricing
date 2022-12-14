@@ -14,8 +14,8 @@ scaler=pickle.load(open('scaling.pkl','rb'))
 #Define the function making the prediction using the data inputted by users
 
 def prediction(data):
-    data = scaler.transform(data).reshape(1,-1)
-    return regmodel.predict(data)
+    data = scaler.transform(data)
+    return regmodel.predict([data])
 
 #This is the main function in which we define our webpage
 def main():
